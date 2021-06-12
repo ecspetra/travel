@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>Travel</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="wrapper__content header-section"></div>
+      </header>
+      <main>
+        <div class="wrapper__content hero-section">
+          <div class="hero-section__content">
+            <div class="hero-section__content__text-block">
+              <div class="hero-section__content__text-block__headline">
+                Enjoy <br />the world
+              </div>
+              <div class="hero-section__content__text-block__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                odio corporis facilis aperiam ad voluptatem eius, quia nulla
+                soluta, blanditiis quae quaerat optio ab laudantium sed dicta
+                reprehenderit provident esse.
+              </div>
+              <button class="button hero-section__content__text-block__button">
+                Explore
+              </button>
+            </div>
+            <div class="hero-section__content__slider">
+              <div class="hero-slider">
+                <div class="slider_item">your content</div>
+                <div class="slider_item">your content</div>
+                <div class="slider_item">your content</div>
+                <div class="slider_item">your content</div>
+                <div class="slider_item">your content</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer><div class="wrapper__content footer-section"></div></footer>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".hero-slider").slick({
+          slidesToShow: 1,
+          variableWidth: true,
+          infinite: true,
+          dots: false,
+          arrows: false,
+        });
+      });
+    </script>
+  </body>
+</html>
