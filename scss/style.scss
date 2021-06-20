@@ -296,7 +296,7 @@ $hero-gradient-color: #163950;
       .hero-section__content__text-block__paragraph {
         font-size: 16px;
         line-height: 30px;
-        margin: 40px 0px 60px 0px;
+        margin: 40px 0px 50px 0px;
         font-weight: 400;
       }
       .hero-section__content__text-block__button {
@@ -346,48 +346,48 @@ $hero-gradient-color: #163950;
             .slide-1 {
               background-image: linear-gradient(
                   to bottom,
-                  rgba(0, 0, 0, 0) 30%,
-                  rgba(0, 0, 0, 0.9) 100%
+                  rgba(#171c1d, 0) 30%,
+                  rgba(#171c1d, 1) 100%
                 ),
                 url("../img/slide-1.jpg");
             }
             .slide-2 {
               background-image: linear-gradient(
                   to bottom,
-                  rgba(0, 0, 0, 0) 30%,
-                  rgba(0, 0, 0, 0.9) 100%
+                  rgba(#171c1d, 0) 30%,
+                  rgba(#171c1d, 1) 100%
                 ),
                 url("../img/slide-2.jpg");
             }
             .slide-3 {
               background-image: linear-gradient(
                   to bottom,
-                  rgba(0, 0, 0, 0) 30%,
-                  rgba(0, 0, 0, 0.9) 100%
+                  rgba(#171c1d, 0) 30%,
+                  rgba(#171c1d, 1) 100%
                 ),
                 url("../img/slide-3.jpg");
             }
             .slide-4 {
               background-image: linear-gradient(
                   to bottom,
-                  rgba(0, 0, 0, 0) 30%,
-                  rgba(0, 0, 0, 0.9) 100%
+                  rgba(#171c1d, 0) 30%,
+                  rgba(#171c1d, 1) 100%
                 ),
                 url("../img/slide-4.jpg");
             }
             .slide-5 {
               background-image: linear-gradient(
                   to bottom,
-                  rgba(0, 0, 0, 0) 30%,
-                  rgba(0, 0, 0, 0.9) 100%
+                  rgba(#171c1d, 0) 30%,
+                  rgba(#171c1d, 1) 100%
                 ),
                 url("../img/slide-5.jpg");
             }
             .slide-6 {
               background-image: linear-gradient(
                   to bottom,
-                  rgba(0, 0, 0, 0) 30%,
-                  rgba(0, 0, 0, 0.9) 100%
+                  rgba(#171c1d, 0) 30%,
+                  rgba(#171c1d, 1) 100%
                 ),
                 url("../img/slide-6.jpg");
             }
@@ -399,7 +399,7 @@ $hero-gradient-color: #163950;
         &:before {
           content: " ";
           background-color: white;
-          width: 100px;
+          width: 40px;
           height: 4px;
           position: absolute;
           bottom: -40px;
@@ -409,7 +409,7 @@ $hero-gradient-color: #163950;
           content: " ";
           background-color: white;
           width: 4px;
-          height: 615px;
+          height: 40px;
           position: absolute;
           bottom: -40px;
           left: -40px;
@@ -484,28 +484,70 @@ $hero-gradient-color: #163950;
       gap: 5px;
       .about-section__content__photos__item {
         background-color: gray;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       .big-photo-1 {
         grid-area: big-photo-1;
         width: 100%;
         height: 900px;
+        background-image: url("../img/photo-2.jpg");
       }
       .big-photo-2 {
         grid-area: big-photo-2;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(#171c1d, 0) 30%,
+            rgba(#171c1d, 0.9) 100%
+          ),
+          url("../img/photo-4.jpg");
+        position: relative;
+
+        &:before {
+          content: "Make discoveries with us!";
+          font-size: 50px;
+          line-height: 50px;
+          text-transform: uppercase;
+          font-family: "Raleway", sans-serif;
+          font-weight: 800;
+          color: white;
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+        }
       }
       .small-photo-1 {
         grid-area: small-photo-1;
+        background-image: url("../img/photo-3.jpg");
       }
       .small-photo-2 {
         grid-area: small-photo-2;
+        background-image: url("../img/photo-5.jpg");
       }
       .small-photo-3 {
         grid-area: small-photo-3;
+        background-image: url("../img/photo-1.jpg");
       }
       .small-photo-4 {
         grid-area: small-photo-4;
+        background-image: url("../img/photo-6.jpg");
       }
     }
+  }
+}
+
+.contacts-section {
+  max-width: 100%;
+  height: 100vh;
+
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .contacts-section__content {
   }
 }
 
