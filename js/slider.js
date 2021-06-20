@@ -5,5 +5,6 @@ $(document).ready(function () {
     infinite: true,
     dots: false,
     arrows: false,
+    focusOnSelect: true,
   });
 });

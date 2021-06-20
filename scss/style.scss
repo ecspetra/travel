@@ -159,6 +159,7 @@ $shadow: #000000;
 
 .wrapper__content {
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .button {
@@ -275,7 +276,6 @@ $shadow: #000000;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // gap: 100px;
     color: white;
     .hero-section__content__text-block {
       flex: 0 0 38%;
@@ -406,16 +406,21 @@ $shadow: #000000;
 }
 .side-contacts {
   .side-contacts__logo {
-    position: fixed;
+    position: absolute;
     top: 80px;
-    left: -18px;
-    text-decoration: none;
-    width: 140px;
-    z-index: 2;
+    left: 0px;
     transform: rotate(-90deg);
-
+    text-decoration: none;
+    width: 100px;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
     svg {
-      width: 140px;
+      width: 100px;
       height: auto;
     }
   }
@@ -436,14 +441,38 @@ $shadow: #000000;
       a {
         color: white;
         text-decoration: none;
-        .side-contacts__item {
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        i {
         }
       }
     }
   }
 }
 
-.fp-right {
+.about-section {
+  .about-section__content {
+    .about-section__content__headline {
+    }
+    .about-section__content__photos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      .about-section__content__photos__item {
+        background-color: gray;
+        width: 300px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+#fp-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -453,6 +482,7 @@ $shadow: #000000;
   webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 1 !important;
+  transition: all 1s ease-in-out;
   ul {
     position: absolute;
     left: 50% !important;
@@ -489,8 +519,12 @@ $shadow: #000000;
         span {
           width: 20px !important;
           height: 20px !important;
+          background: $accent-color !important;
         }
       }
     }
   }
+}
+.dark-side-contacts {
+  background-color: rgba(black, 0.3);
 }
