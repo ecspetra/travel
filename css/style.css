@@ -194,12 +194,12 @@ template {
 .button {
   outline: none;
   border: none;
-  background-color: #16c7a9;
+  background-color: rgba(22, 199, 169, 0.8);
   color: white;
   font-size: 22px;
   font-weight: 600;
   padding: 20px 80px;
-  border-radius: 6px;
+  border-radius: 34px;
   cursor: pointer;
 }
 
@@ -278,22 +278,22 @@ template {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
 }
 .hero-section .hero-section__content {
   padding: 0px 0px 0px 230px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "text-block slider";
   align-items: center;
   color: white;
 }
 .hero-section .hero-section__content .hero-section__content__text-block {
-  flex: 0 0 38%;
+  max-width: 560px;
   z-index: 1;
+  grid-area: text-block;
 }
 .hero-section .hero-section__content .hero-section__content__text-block .hero-section__content__text-block__headline {
   font-size: 100px;
@@ -304,7 +304,7 @@ template {
 }
 .hero-section .hero-section__content .hero-section__content__text-block .hero-section__content__text-block__headline span {
   font-size: 140px;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 4px white;
   margin: 0px 0px 0px -7px;
   color: rgba(255, 255, 255, 0);
 }
@@ -316,6 +316,10 @@ template {
 }
 .hero-section .hero-section__content .hero-section__content__slider {
   max-width: 900px;
+  grid-area: slider;
+}
+.hero-section .hero-section__content .hero-section__content__slider .hero-slider {
+  position: relative;
 }
 .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track {
   display: flex;
@@ -328,7 +332,6 @@ template {
   background-color: black;
   width: 350px;
   height: 450px;
-  border-radius: 14px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -336,9 +339,6 @@ template {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-box-shadow: 0px 8px 10px 0px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: 0px 8px 10px 0px rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 8px 10px 0px rgba(255, 255, 255, 0.2);
   transition: all 1s ease-out;
 }
 .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track .slider-item .slider-item__description {
@@ -376,6 +376,24 @@ template {
 }
 .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track .slick-active {
   height: 550px;
+}
+.hero-section .hero-section__content .hero-section__content__slider .hero-slider:before {
+  content: " ";
+  background-color: white;
+  width: 100px;
+  height: 4px;
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+}
+.hero-section .hero-section__content .hero-section__content__slider .hero-slider:after {
+  content: " ";
+  background-color: white;
+  width: 4px;
+  height: 615px;
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
 }
 
 .side-contacts .side-contacts__logo {
@@ -420,17 +438,39 @@ template {
   -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
+.about-section .about-section__content {
+  padding: 0px 20px;
+}
 .about-section .about-section__content .about-section__content__photos {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "small-photo-1 big-photo-1 small-photo-2" "small-photo-3 big-photo-1 big-photo-2" "small-photo-4 big-photo-1 big-photo-2";
+  gap: 5px;
 }
 .about-section .about-section__content .about-section__content__photos .about-section__content__photos__item {
   background-color: gray;
-  width: 300px;
-  height: 400px;
+}
+.about-section .about-section__content .about-section__content__photos .big-photo-1 {
+  grid-area: big-photo-1;
+  width: 100%;
+  height: 900px;
+}
+.about-section .about-section__content .about-section__content__photos .big-photo-2 {
+  grid-area: big-photo-2;
+}
+.about-section .about-section__content .about-section__content__photos .small-photo-1 {
+  grid-area: small-photo-1;
+}
+.about-section .about-section__content .about-section__content__photos .small-photo-2 {
+  grid-area: small-photo-2;
+}
+.about-section .about-section__content .about-section__content__photos .small-photo-3 {
+  grid-area: small-photo-3;
+}
+.about-section .about-section__content .about-section__content__photos .small-photo-4 {
+  grid-area: small-photo-4;
 }
 
 #fp-nav {
@@ -477,11 +517,6 @@ template {
 #fp-nav ul li .active span {
   width: 20px !important;
   height: 20px !important;
-  background: #16c7a9 !important;
-}
-
-.dark-side-contacts {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */

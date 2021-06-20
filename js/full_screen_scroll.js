@@ -17,24 +17,11 @@ $(document).ready(function () {
         $(".side-contacts__logo").css("opacity", "1");
         $(".side-contacts__icons__item a").css("color", "#16c7a9");
       }
-
-      // if (destination.index == 0 || destination.index == 2) {
-      //   $("#fp-nav").css("background-color", "rgba(white, 0.3)");
-      //   $(".side-contacts__logo").css("visibility", "hidden");
-      // } else {
-      //   $("#fp-nav").css("background-color", "black");
-      //   $(".side-contacts__logo").css("visibility", "visible");
-      // }
+      if (destination.index == 2) {
+        $("#fp-nav").css("background-color", "#16c7a9");
+        $(".side-contacts__logo").css("opacity", "1");
+        $(".side-contacts__icons__item a").css("color", "white");
+      }
     },
   });
 });
-//using index
-// if (index == 1) {
-//   $("#fp-nav").css("background-color", "black");
-// }
-// if (index == 2) {
-//   $("#fp-nav").css("background-color", "blue");
-// }
-// if (index == 3) {
-//   $("#fp-nav").css("background-color", "red");
-// }

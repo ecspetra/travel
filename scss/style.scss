@@ -150,7 +150,6 @@ template {
 
 $accent-color: #16c7a9;
 $hero-gradient-color: #163950;
-$shadow: #000000;
 
 .wrapper {
   width: 100%;
@@ -165,12 +164,12 @@ $shadow: #000000;
 .button {
   outline: none;
   border: none;
-  background-color: $accent-color;
+  background-color: rgba($accent-color, 0.8);
   color: white;
   font-size: 22px;
   font-weight: 600;
   padding: 20px 80px;
-  border-radius: 6px;
+  border-radius: 34px;
   cursor: pointer;
 }
 
@@ -266,20 +265,20 @@ $shadow: #000000;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
   .hero-section__content {
     padding: 0px 0px 0px 230px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "text-block slider";
     align-items: center;
     color: white;
     .hero-section__content__text-block {
-      flex: 0 0 38%;
+      max-width: 560px;
       z-index: 1;
+      grid-area: text-block;
       .hero-section__content__text-block__headline {
         font-size: 100px;
         line-height: 100px;
@@ -289,7 +288,7 @@ $shadow: #000000;
 
         span {
           font-size: 140px;
-          -webkit-text-stroke: 2px white;
+          -webkit-text-stroke: 4px white;
           margin: 0px 0px 0px -7px;
           color: rgba(white, 0);
         }
@@ -305,8 +304,9 @@ $shadow: #000000;
     }
     .hero-section__content__slider {
       max-width: 900px;
-
+      grid-area: slider;
       .hero-slider {
+        position: relative;
         .slick-list {
           .slick-track {
             display: flex;
@@ -318,7 +318,6 @@ $shadow: #000000;
               background-color: black;
               width: 350px;
               height: 450px;
-              border-radius: 14px;
               display: flex;
               flex-direction: row;
               justify-content: flex-start;
@@ -326,9 +325,6 @@ $shadow: #000000;
               background-position: center;
               background-size: cover;
               background-repeat: no-repeat;
-              -webkit-box-shadow: 0px 8px 10px 0px rgba(white, 0.2);
-              -moz-box-shadow: 0px 8px 10px 0px rgba(white, 0.2);
-              box-shadow: 0px 8px 10px 0px rgba(white, 0.2);
               transition: all 1s ease-out;
 
               .slider-item__description {
@@ -400,6 +396,24 @@ $shadow: #000000;
             }
           }
         }
+        &:before {
+          content: " ";
+          background-color: white;
+          width: 100px;
+          height: 4px;
+          position: absolute;
+          bottom: -40px;
+          left: -40px;
+        }
+        &:after {
+          content: " ";
+          background-color: white;
+          width: 4px;
+          height: 615px;
+          position: absolute;
+          bottom: -40px;
+          left: -40px;
+        }
       }
     }
   }
@@ -455,18 +469,41 @@ $shadow: #000000;
 
 .about-section {
   .about-section__content {
+    padding: 0px 20px;
     .about-section__content__headline {
     }
     .about-section__content__photos {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "small-photo-1 big-photo-1 small-photo-2"
+        "small-photo-3 big-photo-1 big-photo-2"
+        "small-photo-4 big-photo-1 big-photo-2";
+      gap: 5px;
       .about-section__content__photos__item {
         background-color: gray;
-        width: 300px;
-        height: 400px;
+      }
+      .big-photo-1 {
+        grid-area: big-photo-1;
+        width: 100%;
+        height: 900px;
+      }
+      .big-photo-2 {
+        grid-area: big-photo-2;
+      }
+      .small-photo-1 {
+        grid-area: small-photo-1;
+      }
+      .small-photo-2 {
+        grid-area: small-photo-2;
+      }
+      .small-photo-3 {
+        grid-area: small-photo-3;
+      }
+      .small-photo-4 {
+        grid-area: small-photo-4;
       }
     }
   }
@@ -519,12 +556,8 @@ $shadow: #000000;
         span {
           width: 20px !important;
           height: 20px !important;
-          background: $accent-color !important;
         }
       }
     }
   }
-}
-.dark-side-contacts {
-  background-color: rgba(black, 0.3);
 }
