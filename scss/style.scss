@@ -480,7 +480,7 @@ $hero-gradient-color: #163950;
       grid-template-areas:
         "small-photo-1 big-photo-1 small-photo-2"
         "small-photo-3 big-photo-1 big-photo-2"
-        "small-photo-4 big-photo-1 big-photo-2";
+        "small-video big-photo-1 big-photo-2";
       gap: 5px;
       .about-section__content__photos__item {
         background-color: gray;
@@ -529,9 +529,15 @@ $hero-gradient-color: #163950;
         grid-area: small-photo-3;
         background-image: url("../img/photo-1.jpg");
       }
-      .small-photo-4 {
-        grid-area: small-photo-4;
-        background-image: url("../img/photo-6.jpg");
+      // .small-photo-4 {
+      //   grid-area: small-photo-4;
+      //   background-image: url("../img/photo-6.jpg");
+      // }
+      .small-video {
+        grid-area: small-video;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -542,11 +548,11 @@ $hero-gradient-color: #163950;
   height: 100vh;
   position: relative;
 
-  video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-  }
+  // video {
+  //   object-fit: cover;
+  //   width: 100vw;
+  //   height: 100vh;
+  // }
 
   .contacts-section__gradient {
     position: absolute;
