@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  new fullpage("#fullpage", {
+  $("#fullpage").fullpage({
     navigation: true,
     responsiveWidth: 700,
     licenseKey: null,
