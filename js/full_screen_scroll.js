@@ -5,7 +5,7 @@ $(document).ready(function () {
     licenseKey: null,
     anchors: ["home", "about-us", "contact"],
     parallax: true,
-    continuousVertical: true,
+    continuousVertical: false,
     onLeave: function (origin, destination, direction) {
       if (destination.index == 0) {
         $("#fp-nav").css("background-color", "rgba(white, 0.3)");
@@ -19,7 +19,7 @@ $(document).ready(function () {
       }
       if (destination.index == 2) {
         $("#fp-nav").css("background-color", "#16c7a9");
-        $(".side-contacts__logo").css("opacity", "1");
+        $(".side-contacts__logo").css("opacity", "0");
         $(".side-contacts__icons__item a").css("color", "white");
       }
     },
