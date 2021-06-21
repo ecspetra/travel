@@ -304,8 +304,9 @@ template {
 }
 .hero-section .hero-section__content .hero-section__content__text-block .hero-section__content__text-block__headline span {
   font-size: 140px;
-  -webkit-text-stroke: 4px white;
-  margin: 0px 0px 0px -7px;
+  -webkit-text-stroke: 6px white;
+  letter-spacing: 10px;
+  margin: 0px 0px 0px -4px;
   color: rgba(255, 255, 255, 0);
 }
 .hero-section .hero-section__content .hero-section__content__text-block .hero-section__content__text-block__paragraph {
@@ -381,7 +382,7 @@ template {
   content: " ";
   background-color: white;
   width: 40px;
-  height: 4px;
+  height: 3px;
   position: absolute;
   bottom: -40px;
   left: -40px;
@@ -389,7 +390,7 @@ template {
 .hero-section .hero-section__content .hero-section__content__slider .hero-slider:after {
   content: " ";
   background-color: white;
-  width: 4px;
+  width: 3px;
   height: 40px;
   position: absolute;
   bottom: -40px;
@@ -447,7 +448,8 @@ template {
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas: "small-photo-1 big-photo-1 small-photo-2" "small-photo-3 big-photo-1 big-photo-2" "small-video big-photo-1 big-photo-2";
-  gap: 5px;
+  gap: 3px;
+  position: relative;
 }
 .about-section .about-section__content .about-section__content__photos .about-section__content__photos__item {
   background-color: gray;
@@ -466,8 +468,7 @@ template {
   background-image: linear-gradient(to bottom, rgba(23, 28, 29, 0) 30%, rgba(23, 28, 29, 0.9) 100%), url("../img/photo-4.jpg");
   position: relative;
 }
-.about-section .about-section__content .about-section__content__photos .big-photo-2:before {
-  content: "Make discoveries with us!";
+.about-section .about-section__content .about-section__content__photos .big-photo-2 .about-section__content__photos__item__headline {
   font-size: 50px;
   line-height: 50px;
   text-transform: uppercase;
@@ -477,6 +478,29 @@ template {
   position: absolute;
   bottom: 30px;
   left: 30px;
+}
+.about-section .about-section__content .about-section__content__photos .big-photo-2 .about-section__content__photos__item__headline span {
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 2px #16c7a9;
+  letter-spacing: 2px;
+}
+.about-section .about-section__content .about-section__content__photos .big-photo-2:before {
+  content: " ";
+  background-color: white;
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.about-section .about-section__content .about-section__content__photos .big-photo-2:after {
+  content: " ";
+  background-color: white;
+  width: 3px;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 .about-section .about-section__content .about-section__content__photos .small-photo-1 {
   grid-area: small-photo-1;
@@ -502,14 +526,20 @@ template {
   height: 100vh;
   position: relative;
 }
-.contacts-section .contacts-section__gradient {
+.contacts-section:before {
+  content: " ";
+  background-image: url("../img/contacts-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
-  left: 0;
+  bottom: 0;
   top: 0;
-  width: 100%;
+  left: 0;
+  width: 50%;
   height: 100%;
-  background: linear-gradient(to left, rgba(22, 57, 80, 0.7), rgba(22, 57, 80, 0.6) 100%);
 }
+
 #fp-nav {
   position: fixed;
   top: 0;
