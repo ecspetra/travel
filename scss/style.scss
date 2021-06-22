@@ -201,15 +201,18 @@ template {
     padding: 0px 20px;
     margin: 0 auto;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "logo contacts";
     align-items: center;
 
     .header-section__content__logo {
       text-decoration: none;
       width: 80px;
       z-index: 1;
+      grid-area: logo;
 
       svg {
         width: 80px;
@@ -226,6 +229,7 @@ template {
         "phone"
         "email";
       align-items: center;
+      grid-area: contacts;
 
       .header-section__content__contacts__item {
         line-height: 1;
@@ -374,7 +378,7 @@ template {
               &:before {
                 content: "10% OFF";
                 font-family: "Montserrat", sans-serif;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 500;
                 background-color: rgb(211, 44, 66);
                 padding: 4px 10px;
@@ -395,7 +399,7 @@ template {
               &:before {
                 content: "8% OFF";
                 font-family: "Montserrat", sans-serif;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 500;
                 background-color: rgb(211, 44, 66);
                 padding: 4px 10px;
@@ -465,8 +469,8 @@ template {
           left: -40px;
         }
         .prev {
-          width: 40px;
-          height: 40px;
+          width: 50px;
+          height: 50px;
           background-image: url("../img/left-arrow.svg");
           background-size: 100%;
           background-position: center;
@@ -485,8 +489,8 @@ template {
           }
         }
         .next {
-          width: 40px;
-          height: 40px;
+          width: 50px;
+          height: 50px;
           background-image: url("../img/right-arrow.svg");
           background-size: 100%;
           background-position: center;
@@ -512,6 +516,10 @@ template {
   position: relative;
   width: 100px;
   .side-contacts__logo {
+    background-image: url("../img/logo-trvl.svg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     bottom: 90vh;
     left: 50%;
@@ -519,6 +527,7 @@ template {
     transform: translateX(-50%);
     text-decoration: none;
     width: 60px;
+    height: 60px;
     z-index: 2;
     opacity: 0;
     -webkit-transition: all 1s ease-in-out;
@@ -526,10 +535,6 @@ template {
     -o-transition: all 1s ease-in-out;
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-    svg {
-      width: 60px;
-      height: auto;
-    }
   }
   .side-contacts__icons {
     position: fixed;
@@ -560,12 +565,12 @@ template {
   }
 }
 
-.about-section {
-  .about-section__content {
+.gallery-section {
+  .gallery-section__content {
     padding: 0px 20px;
-    .about-section__content__headline {
+    .gallery-section__content__headline {
     }
-    .about-section__content__photos {
+    .gallery-section__content__photos {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
@@ -577,7 +582,7 @@ template {
       gap: 3px;
       position: relative;
       height: 880px;
-      .about-section__content__photos__item {
+      .gallery-section__content__photos__item {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -598,7 +603,7 @@ template {
           url("../img/photo-4.jpg");
         position: relative;
 
-        .about-section__content__photos__item__headline {
+        .gallery-section__content__photos__item__headline {
           font-size: 50px;
           line-height: 50px;
           text-transform: uppercase;
@@ -652,6 +657,150 @@ template {
         height: 100%;
       }
     }
+  }
+}
+
+.about-section {
+  display: grid;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+  .about-section__content {
+    margin: 0 auto;
+    max-width: 1440px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 100px;
+    grid-template-areas: "text-block img";
+    align-items: center;
+    padding: 60px 20px 60px 20px;
+    position: relative;
+    z-index: 2;
+    .about-section__content__img {
+      background-image: url("../img/about-img.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 700px;
+      height: 800px;
+      grid-area: img;
+      justify-self: end;
+      align-self: start;
+      position: relative;
+      &:before {
+        content: " ";
+        background-color: white;
+        width: 40px;
+        height: 3px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+      &:after {
+        content: " ";
+        background-color: white;
+        width: 3px;
+        height: 40px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    .about-section__content__text-block {
+      display: grid;
+      grid-area: text-block;
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(min-content, max-content);
+      gap: 0px 0px;
+      grid-template-areas:
+        "headline"
+        "paragraph"
+        "advantages";
+      .about-section__content__text-block__headline {
+        grid-area: headline;
+        font-size: 100px;
+        line-height: 100px;
+        text-transform: uppercase;
+        font-family: "Raleway", sans-serif;
+        font-weight: 800;
+        align-self: end;
+
+        #number {
+          color: $accent-color;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+        }
+
+        #years {
+          color: $accent-color;
+        }
+      }
+      .about-section__content__text-block__paragraph {
+        grid-area: paragraph;
+        font-size: 20px;
+        line-height: 34px;
+        margin: 40px 0px 40px 0px;
+        font-weight: 500;
+        align-self: start;
+
+        span {
+          font-weight: 700;
+          font-family: "Montserrat", sans-serif;
+        }
+      }
+      .about-section__content__text-block__advantages {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        grid-template-areas:
+          "item-1 item-2"
+          "item-3 item-4";
+        align-self: start;
+        align-items: start;
+        width: 100%;
+        height: 240px;
+        grid-area: advantages;
+        .about-section__content__text-block__advantages__item {
+          .advantages__item__number {
+            font-weight: 700;
+            font-family: "Montserrat", sans-serif;
+            color: $accent-color;
+            font-size: 50px;
+            position: relative;
+            margin: 0px 0px 20px 0px;
+
+            &:before {
+              content: " ";
+              background-color: $accent-color;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 50px;
+              height: 3px;
+            }
+          }
+          .advantages__item__description {
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  &:before {
+    content: " ";
+    background-color: $accent-color;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    z-index: 1;
   }
 }
 
@@ -807,7 +956,7 @@ template {
     content: " ";
     background-color: $accent-color;
     position: absolute;
-    bottom: 140px;
+    bottom: 145px;
     left: 20px;
     width: 700px;
     height: 3px;
@@ -821,9 +970,8 @@ template {
   left: 0;
   width: 100px;
   height: 100%;
-  background-color: rgba(white, 0.3);
-  webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background-color: rgba(white, 0);
+  border-right: 3px solid rgba(255, 255, 255, 1);
   z-index: 1 !important;
   transition: all 1s ease-in-out;
   ul {
