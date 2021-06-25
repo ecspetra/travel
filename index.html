@@ -14,14 +14,15 @@
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="fullpage.js/dist/fullpage.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="fullpage.js/dist/fullpage.css" /> -->
   <link href="fontawesome/css/all.css" rel="stylesheet" />
+  <link rel="stylesheet" href="onepage-scroll/onepage-scroll.css">
 
   <title>Travel</title>
 </head>
 
 <body>
-  <div class="wrapper" id="fullpage">
+  <div class="wrapper">
     <header>
       <div class="wrapper__content header-section">
         <div class="header-section__content">
@@ -66,7 +67,7 @@
       </div>
     </header>
     <main>
-      <div class="wrapper__content hero-section section">
+      <section class="wrapper__content hero-section section">
         <div class="hero-section__content">
           <div class="hero-section__content__text-block">
             <div class="hero-section__content__text-block__headline">
@@ -77,7 +78,7 @@
               <span>with
                 maximum comfort</span> and at an affordable price.
             </div>
-            <button class="button hero-section__content__text-block__button">
+            <button class="button hero-section__content__text-block__button" onclick="PopUpShow()">
               Start your journey
             </button>
           </div>
@@ -152,10 +153,9 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="wrapper__content gallery-section section">
+      </section>
+      <section class="wrapper__content gallery-section section">
         <div class="gallery-section__content">
-          <div class="gallery-section__content__headline"></div>
           <div class="gallery-section__content__photos">
             <div class="gallery-section__content__photos__item small-photo-1"></div>
             <div class="gallery-section__content__photos__item big-photo-1"></div>
@@ -168,10 +168,13 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="wrapper__content about-section section">
+      </section>
+      <section class="wrapper__content about-section section">
         <div class="about-section__content">
-          <div class="about-section__content__img"></div>
+          <div class="about-section__content__img">
+            <div class="about-section__content__rectangle"></div>
+          </div>
+
           <div class="about-section__content__text-block">
             <div class="about-section__content__text-block__headline"><span id="number">10+</span> <span
                 id="years">years</span> in
@@ -202,8 +205,8 @@
           </div>
 
         </div>
-      </div>
-      <div class="wrapper__content contacts-section section">
+      </section>
+      <section class="wrapper__content contacts-section section">
         <div class="contacts-section__content">
           <div class="contacts-section__content__img"></div>
           <div class="contacts-section__content__right">
@@ -249,16 +252,16 @@
               <div class="contacts-section__content__right__text-block__paragraph">
                 Choose <span>the best deal</span> and enjoy the Earth <span>with TRVL company</span>.
               </div>
-              <button class="button contacts-section__content__right__text-block__button">
+              <button class="button contacts-section__content__right__text-block__button" onclick="PopUpShow()">
                 Start your journey
               </button>
             </div>
-            <button class="button contacts-section__content__right__questions-button">
-              Have any questions?
+            <button class="button contacts-section__content__right__home-button">
+              To top
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer>
       <div class="wrapper__content footer-section">
@@ -288,68 +291,71 @@
       </div>
     </div>
   </div>
+  <div class="order-popup" id="order-popup">
+    <div class="order-popup__content">
+      <form class="order-popup__content__form" action="" method="post">
+        <div class="order-popup__content__form__headline"><span>Fill out the form</span> and we will call you back to
+          agree on the
+          details of your trip</div>
+        <div class="form__item"><label for="client-name">Name</label>
+          <input class="form__item__field client-name" id="client-name" type="text" name="client-name" required>
+        </div>
+        <div class="form__item"><label for="client-surname">Surname</label>
+          <input class="form__item__field client-surname" id="client-surname" type="text" name="client-surname">
+        </div>
+        <div class="form__item"><label for="client-phone">Phone</label>
+          <input class="form__item__field client-phone" id="client-phone" type="text" name="client-phone" required>
+        </div>
+        <div class="form__item"><label for="client-phone" required>Select your tour</label>
+          <select class="form__item__field client-tour" size="1">
+            <option disabled>Your tour</option>
+            <option value="tour-1">National Park, California</option>
+            <option value="tour-2">Big Sur, California</option>
+            <option value="tour-3">Killington, Vermont</option>
+            <option value="tour-4">Middleton, Wisconsin</option>
+            <option value="tour-5">Morrison, Colorado</option>
+            <option value="tour-6">The Palouse</option>
+          </select>
+        </div>
+        <input class="submit-button button" type="submit" value="Send">
+      </form>
+      <button class="close-button" onclick="PopUpHide()"><svg class="" width="512" height="512"
+          enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 341.75 341.75" xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg">
+          <g xmlns="http://www.w3.org/2000/svg">
+
+
+            <rect transform="matrix(.7072 -.707 .707 .7072 -70.787 170.83)" x="-49.415" y="149.54" width="440.53"
+              height="42.667" fill="#fff" style="" data-original="#000000" />
+
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+
+
+            <rect transform="matrix(.707 -.7072 .7072 .707 -70.771 170.92)" x="149.57" y="-49.388" width="42.667"
+              height="440.53" fill="#fff" style="" data-original="#000000" />
+
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="fullpage.js/dist/fullpage.min.js"></script>
-  <script type="text/javascript" src="js/full_screen_scroll.js"></script>
+  <!-- <script type="text/javascript" src="fullpage.js/dist/fullpage.min.js"></script>
+  <script type="text/javascript" src="js/full_screen_scroll.js"></script> -->
   <script type="text/javascript" src="js/slider.js"></script>
-
-
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript" src="masked-input/jquery.maskedinput.js"></script>
+  <script type="text/javascript" src="js/form-masks.js"></script>
   <script type="text/javascript" src="js/jquery.animateNumber.js"></script>
+  <script type="text/javascript" src="js/animated-numbers.js"></script>
+  <script type="text/javascript" src="js/full-screen-scroll.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $('#number-1').animateNumber({
-          number: 1000,
-          color: 'green',
-          easing: 'easeInQuad',
-          numberStep: function (now, tween) {
-            var floored_number = Math.floor(now),
-              target = $(tween.elem);
-            target.text(floored_number + "+");
-          }
-        },
-        1800
-      );
-      $('#number-2').animateNumber({
-          number: 100,
-          color: 'green',
-          easing: 'easeInQuad',
-          numberStep: function (now, tween) {
-            var floored_number = Math.floor(now),
-              target = $(tween.elem);
-            target.text(floored_number + "+");
-          }
-        },
-        1800
-      );
-      $('#number-3').animateNumber({
-          number: 30,
-          color: 'green',
-          easing: 'easeInQuad',
-          numberStep: function (now, tween) {
-            var floored_number = Math.floor(now),
-              target = $(tween.elem);
-            target.text(floored_number + "+");
-          }
-        },
-        1800
-      );
-      $('#number-4').animateNumber({
-          number: 20,
-          color: 'green',
-          easing: 'easeInQuad',
-          numberStep: function (now, tween) {
-            var floored_number = Math.floor(now),
-              target = $(tween.elem);
-            target.text(floored_number + "+");
-          }
-        },
-        1800
-      );
-    });
-  </script>
+
+  <script type="text/javascript" src="onepage-scroll/jquery.onepage-scroll.js"></script>
+
 </body>
 
 </html>
