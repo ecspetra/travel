@@ -10,7 +10,7 @@ $(document).ready(function () {
       if (index == 1) {
         $(".onepage-pagination").css("background-color", "rgba(white, 0.3)");
         $(".onepage-pagination").css("border-color", "white");
-        $(".side-contacts__logo").css("opacity", "0");
+        $(".side-contacts__logo").css("opacity", "1");
         $(".side-contacts__logo").css(
           "background-image",
           'url("../img/logo-trvl.svg")'
@@ -66,7 +66,7 @@ $(document).ready(function () {
     },
     loop: false,
     keyboard: true,
-    responsiveFallback: false,
+    responsiveFallback: 1001,
     direction: "vertical",
   });
 });

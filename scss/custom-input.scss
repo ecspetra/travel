@@ -1,0 +1,87 @@
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  color: $darken-color;
+  margin: 10px 0px 0px 0px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+}
+.select-styled {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(white, 0.7);
+  padding: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &:after {
+    content: " ";
+    background-image: url("../img/down-arrow.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    opacity: 0.7;
+  }
+  &:hover {
+    background-color: rgba(white, 1);
+  }
+  &:active,
+  &.active {
+    background-color: rgba(white, 1);
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgba(white, 1);
+  li {
+    margin: 0px;
+    padding: 12px 0px;
+    text-indent: 15px;
+    border-top: 1px solid rgba($darken-color, 0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $darken-color;
+      background: rgba($accent-color, 0.2);
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}

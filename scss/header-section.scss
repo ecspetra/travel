@@ -1,0 +1,223 @@
+.header-section {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+
+  .header-section__content {
+    max-width: 1440px;
+    padding: 0px 20px;
+    margin: 40px auto 0px auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "logo contacts";
+    align-items: center;
+
+    .header-section__content__logo {
+      text-decoration: none;
+      width: 50px;
+      z-index: 1;
+      grid-area: logo;
+      display: none;
+
+      svg {
+        width: 50px;
+        height: auto;
+      }
+    }
+
+    .header-section__content__contacts {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "phone"
+        "email";
+      align-items: center;
+      grid-area: contacts;
+      justify-self: end;
+
+      .header-section__content__contacts__item {
+        line-height: 1;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        color: white;
+        z-index: 2;
+        text-align: right;
+      }
+      .phone {
+        grid-area: phone;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0px 0px 5px 0px;
+      }
+      .email {
+        grid-area: email;
+      }
+    }
+  }
+}
+
+.mobile-header {
+  position: fixed;
+  left: 0;
+  top: 0 !important;
+  height: 60px;
+  z-index: 3;
+  background-color: white;
+  color: $darken-color;
+  display: grid;
+  align-content: center;
+  border-bottom: 1px solid rgba($darken-color, 0.2) !important;
+
+  .header-section__content {
+    width: 100%;
+    .header-section__content__logo {
+      display: grid !important;
+      align-items: center;
+      svg {
+        align-self: center;
+      }
+    }
+
+    .header-section__content__contacts {
+      .header-section__content__contacts__item {
+        font-size: 14px;
+        font-weight: 500;
+        color: $darken-color;
+        z-index: 2;
+      }
+      .phone {
+        grid-area: phone;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0px 0px 3px 0px;
+      }
+      .email {
+      }
+    }
+  }
+}
+
+@media (max-width: 1760px) {
+  .header-section {
+    .header-section__content {
+      .header-section__content__logo {
+        svg {
+        }
+      }
+
+      .header-section__content__contacts {
+        .header-section__content__contacts__item {
+        }
+        .phone {
+        }
+        .email {
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .header-section {
+    .header-section__content {
+      padding: 0px 70px;
+      margin: 0px auto;
+      .header-section__content__logo {
+        svg {
+        }
+      }
+
+      .header-section__content__contacts {
+        .header-section__content__contacts__item {
+        }
+        .phone {
+        }
+        .email {
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .header-section {
+    .header-section__content {
+      padding: 0px 50px;
+      .header-section__content__logo {
+        display: block;
+        svg {
+        }
+      }
+
+      .header-section__content__contacts {
+        .header-section__content__contacts__item {
+        }
+        .phone {
+        }
+        .email {
+        }
+      }
+    }
+  }
+}
+@media (max-width: 860px) {
+  .header-section {
+    .header-section__content {
+      padding: 0px 20px;
+      .header-section__content__logo {
+        display: block;
+        svg {
+        }
+      }
+
+      .header-section__content__contacts {
+        .header-section__content__contacts__item {
+        }
+        .phone {
+        }
+        .email {
+        }
+      }
+    }
+  }
+}
+@media (max-width: 490px) {
+  .header-section {
+    .header-section__content {
+      padding: 0px 10px;
+      .header-section__content__logo {
+        display: block;
+        width: 40px;
+        svg {
+          width: 40px;
+          height: auto;
+        }
+      }
+
+      .header-section__content__contacts {
+        .header-section__content__contacts__item {
+        }
+        .phone {
+        }
+        .email {
+        }
+      }
+    }
+  }
+}
