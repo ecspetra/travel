@@ -7,7 +7,6 @@
   background-color: rgba(white, 0);
   border-right: 3px solid rgba(255, 255, 255, 1);
   z-index: 2 !important;
-  transition: all 1s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,6 +50,24 @@
       height: 12px !important;
       &:before {
         display: none;
+      }
+    }
+  }
+}
+@media (max-width: 1500px) {
+  .onepage-pagination {
+    width: 60px;
+    li {
+      width: 60px !important;
+      height: 20px !important;
+      margin: 10px 0px;
+      a {
+        &:before {
+        }
+      }
+      .active {
+        &:before {
+        }
       }
     }
   }

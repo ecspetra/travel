@@ -1022,7 +1022,7 @@
             .slick-track {
               height: 320px;
               margin: 0px;
-              gap: 10px;
+              gap: 0px;
               .slider-item {
                 width: 400px;
                 height: 320px;
@@ -1168,12 +1168,14 @@
           .slick-list {
             .slick-track {
               height: 280px;
+              width: 100%;
               margin: 0px;
-              gap: 10px;
+              gap: 0px;
               .slider-item {
                 width: 290px;
                 height: 280px;
                 .slider-item__description {
+                  padding: 20px 20px 25px 20px;
                   .slider-item__description__country {
                     i {
                     }

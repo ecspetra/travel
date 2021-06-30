@@ -49,6 +49,32 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .side-contacts {
+    width: 60px;
+    .side-contacts__logo {
+      bottom: 90vh;
+      width: 50px;
+      height: 50px;
+    }
+    .side-contacts__icons {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      width: 60px;
+      height: 20%;
+      font-size: 20px;
+      gap: 10px;
+      .side-contacts__icons__item {
+        a {
+          i {
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .side-contacts {
     position: fixed;
@@ -76,13 +102,6 @@
       margin: 0 auto;
       .side-contacts__icons__item {
         a {
-          color: white;
-          text-decoration: none;
-          -webkit-transition: all 1s ease-in-out;
-          -moz-transition: all 1s ease-in-out;
-          -o-transition: all 1s ease-in-out;
-          -ms-transition: all 1s ease-in-out;
-          transition: all 1s ease-in-out;
           i {
           }
         }

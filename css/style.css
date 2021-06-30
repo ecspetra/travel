@@ -1093,7 +1093,7 @@ template {
   .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track {
     height: 320px;
     margin: 0px;
-    gap: 10px;
+    gap: 0px;
   }
   .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track .slider-item {
     width: 400px;
@@ -1188,12 +1188,16 @@ template {
   }
   .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track {
     height: 280px;
+    width: 100%;
     margin: 0px;
-    gap: 10px;
+    gap: 0px;
   }
   .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track .slider-item {
     width: 290px;
     height: 280px;
+  }
+  .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track .slider-item .slider-item__description {
+    padding: 20px 20px 25px 20px;
   }
   .hero-section .hero-section__content .hero-section__content__slider .hero-slider .slick-list .slick-track .slider-item .slider-item__description .slider-item__description__place {
     font-size: 22px;
@@ -2413,6 +2417,25 @@ template {
   -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
+@media (max-width: 1500px) {
+  .side-contacts {
+    width: 60px;
+  }
+  .side-contacts .side-contacts__logo {
+    bottom: 90vh;
+    width: 50px;
+    height: 50px;
+  }
+  .side-contacts .side-contacts__icons {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 60px;
+    height: 20%;
+    font-size: 20px;
+    gap: 10px;
+  }
+}
 @media (max-width: 1000px) {
   .side-contacts {
     position: fixed;
@@ -2440,15 +2463,6 @@ template {
     gap: 20px;
     margin: 0 auto;
   }
-  .side-contacts .side-contacts__icons .side-contacts__icons__item a {
-    color: white;
-    text-decoration: none;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }
 }
 .onepage-pagination {
   position: fixed;
@@ -2459,7 +2473,6 @@ template {
   background-color: rgba(255, 255, 255, 0);
   border-right: 3px solid white;
   z-index: 2 !important;
-  transition: all 1s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2508,6 +2521,16 @@ template {
   display: none;
 }
 
+@media (max-width: 1500px) {
+  .onepage-pagination {
+    width: 60px;
+  }
+  .onepage-pagination li {
+    width: 60px !important;
+    height: 20px !important;
+    margin: 10px 0px;
+  }
+}
 .order-popup {
   width: 100%;
   min-height: 100%;
