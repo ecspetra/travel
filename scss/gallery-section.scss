@@ -17,7 +17,7 @@
       grid-template-areas:
         "small-photo-1 big-photo-1 small-photo-2"
         "small-photo-3 big-photo-1 big-photo-2"
-        "small-video big-photo-1 big-photo-2";
+        "small-photo-4 big-photo-1 big-photo-2";
       gap: 3px;
       position: relative;
       height: 90vh;
@@ -31,6 +31,7 @@
       .big-photo-1 {
         grid-area: big-photo-1;
         background-image: url("../img/photo-2.jpg");
+        width: 500px;
       }
       .big-photo-2 {
         grid-area: big-photo-2;
@@ -89,11 +90,9 @@
         grid-area: small-photo-3;
         background-image: url("../img/photo-1.jpg");
       }
-      .small-video {
-        grid-area: small-video;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+      .small-photo-4 {
+        grid-area: small-photo-4;
+        background-image: url("../img/photo-6.jpg");
       }
     }
   }
@@ -124,7 +123,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -159,7 +158,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -192,7 +191,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -227,7 +226,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -262,7 +261,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -297,7 +296,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -336,7 +335,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -377,7 +376,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -396,7 +395,7 @@
         grid-template-areas:
           "small-photo-1 big-photo-2"
           "small-photo-3 big-photo-1"
-          "small-video small-photo-2";
+          "small-photo-4 small-photo-2";
         gap: 3px;
         height: 560px;
         .gallery-section__content__photos__item {
@@ -423,7 +422,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }
@@ -443,7 +442,7 @@
           "small-photo-3"
           "big-photo-1"
           "small-photo-1"
-          "small-video";
+          "small-photo-4";
         gap: 3px;
         height: auto;
         .gallery-section__content__photos__item {
@@ -470,7 +469,7 @@
         }
         .small-photo-3 {
         }
-        .small-video {
+        .small-photo-4 {
         }
       }
     }

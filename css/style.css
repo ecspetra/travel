@@ -1257,7 +1257,7 @@ template {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: "small-photo-1 big-photo-1 small-photo-2" "small-photo-3 big-photo-1 big-photo-2" "small-video big-photo-1 big-photo-2";
+  grid-template-areas: "small-photo-1 big-photo-1 small-photo-2" "small-photo-3 big-photo-1 big-photo-2" "small-photo-4 big-photo-1 big-photo-2";
   gap: 3px;
   position: relative;
   height: 90vh;
@@ -1272,6 +1272,7 @@ template {
 .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
   grid-area: big-photo-1;
   background-image: url("../img/photo-2.jpg");
+  width: 500px;
 }
 .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 {
   grid-area: big-photo-2;
@@ -1322,11 +1323,9 @@ template {
   grid-area: small-photo-3;
   background-image: url("../img/photo-1.jpg");
 }
-.gallery-section .gallery-section__content .gallery-section__content__photos .small-video {
-  grid-area: small-video;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.gallery-section .gallery-section__content .gallery-section__content__photos .small-photo-4 {
+  grid-area: small-photo-4;
+  background-image: url("../img/photo-6.jpg");
 }
 
 @media (max-width: 1760px) {
@@ -1444,7 +1443,7 @@ template {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
-    grid-template-areas: "small-photo-1 big-photo-2" "small-photo-3 big-photo-1" "small-video small-photo-2";
+    grid-template-areas: "small-photo-1 big-photo-2" "small-photo-3 big-photo-1" "small-photo-4 small-photo-2";
     gap: 3px;
     height: 560px;
   }
@@ -1460,7 +1459,7 @@ template {
     grid-template-columns: 1fr;
     grid-template-rows: 240px 240px 240px 240px 240px 240px;
     gap: 0px 0px;
-    grid-template-areas: "big-photo-2" "small-photo-2" "small-photo-3" "big-photo-1" "small-photo-1" "small-video";
+    grid-template-areas: "big-photo-2" "small-photo-2" "small-photo-3" "big-photo-1" "small-photo-1" "small-photo-4";
     gap: 3px;
     height: auto;
   }
