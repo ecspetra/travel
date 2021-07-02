@@ -13,7 +13,7 @@ $(document).ready(function () {
         $(".side-contacts__logo").css("opacity", "1");
         $(".side-contacts__logo").css(
           "background-image",
-          'url("img/logo-trvl.svg")'
+          'url("/img/logo-trvl.svg")'
         );
         $(".side-contacts__icons__item a").css("color", "white");
         $(".onepage-pagination a").attr(
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $(".side-contacts__logo").css("opacity", "1");
         $(".side-contacts__logo").css(
           "background-image",
-          'url("img/logo-trvl.svg")'
+          'url("/img/logo-trvl.svg")'
         );
         $(".side-contacts__icons__item a").css("color", "#16c7a9");
         $(".onepage-pagination a").attr(
@@ -41,7 +41,7 @@ $(document).ready(function () {
         $(".side-contacts__logo").css("opacity", "1");
         $(".side-contacts__logo").css(
           "background-image",
-          'url("img/logo-dark-trvl.svg")'
+          'url("/img/logo-dark-trvl.svg")'
         );
         $(".side-contacts__icons__item a").css("color", "#16c7a9");
         $(".onepage-pagination a").attr(
@@ -55,7 +55,7 @@ $(document).ready(function () {
         $(".side-contacts__logo").css("opacity", "0");
         $(".side-contacts__logo").css(
           "background-image",
-          'url("img/logo-dark-trvl.svg")'
+          'url("/img/logo-dark-trvl.svg")'
         );
         $(".side-contacts__icons__item a").css("color", "white");
         $(".onepage-pagination a").attr(

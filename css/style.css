@@ -476,6 +476,9 @@ template {
 .mobile-header .header-section__content .header-section__content__logo svg {
   align-self: center;
 }
+.mobile-header .header-section__content .header-section__content__contacts {
+  margin: 2px 0px 0px 0px;
+}
 .mobile-header .header-section__content .header-section__content__contacts .header-section__content__contacts__item {
   font-size: 14px;
   font-weight: 500;
@@ -1096,7 +1099,7 @@ template {
 @media (max-width: 860px) {
   .hero-section {
     height: auto;
-    padding: 115px 40px 60px 40px;
+    padding: 115px 20px 60px 20px;
   }
   .hero-section .hero-section__content {
     max-width: 860px;
@@ -2430,7 +2433,7 @@ template {
   z-index: 2;
 }
 .side-contacts .side-contacts__logo {
-  background-image: url("img/logo-trvl.svg");
+  background-image: url("/img/logo-trvl.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
