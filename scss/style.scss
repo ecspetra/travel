@@ -1,106 +1,8 @@
 $accent-color: #16c7a9;
 $darken-color: #171c1d;
 
-.wrapper {
-  width: 100%;
-}
-
-.wrapper__content {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.button {
-  outline: none;
-  border: none;
-  background-color: rgba($accent-color, 0.8);
-  color: white;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 700;
-  padding: 24px 50px;
-  border-radius: 34px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    background-color: rgba($accent-color, 1);
-  }
-}
-
-svg * {
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-}
-@media (max-width: 1400px) {
-  .button {
-    outline: none;
-    border: none;
-    background-color: rgba($accent-color, 0.8);
-    color: white;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    padding: 20px 40px;
-    border-radius: 34px;
-    cursor: pointer;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: rgba($accent-color, 1);
-    }
-  }
-}
-@media (max-width: 490px) {
-  .button {
-    outline: none;
-    border: none;
-    background-color: rgba($accent-color, 0.8);
-    color: white;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    padding: 20px 30px;
-    border-radius: 34px;
-    cursor: pointer;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: rgba($accent-color, 1);
-    }
-  }
-}
-
 @import "normalize.scss";
+@import "wrapper.scss";
 @import "custom-input.scss";
 @import "header-section.scss";
 @import "hero-section.scss";
@@ -110,3 +12,5 @@ svg * {
 @import "side-contacts.scss";
 @import "onepage-pagination.scss";
 @import "order-popup.scss";
+@import "preloader.scss";
+@import "buttons.scss";

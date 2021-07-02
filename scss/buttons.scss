@@ -1,0 +1,71 @@
+.button {
+  outline: none;
+  border: none;
+  background-color: rgba($accent-color, 0.8);
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 24px 50px;
+  border-radius: 34px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba($accent-color, 1);
+  }
+}
+
+@media (max-width: 1400px) {
+  .button {
+    outline: none;
+    border: none;
+    background-color: rgba($accent-color, 0.8);
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 34px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba($accent-color, 1);
+    }
+  }
+}
+@media (max-width: 490px) {
+  .button {
+    outline: none;
+    border: none;
+    background-color: rgba($accent-color, 0.8);
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    padding: 20px 30px;
+    border-radius: 34px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba($accent-color, 1);
+    }
+  }
+}

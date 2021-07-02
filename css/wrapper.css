@@ -1,0 +1,10 @@
+.wrapper {
+  width: 100%;
+}
+
+.wrapper__content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=wrapper.css.map */
