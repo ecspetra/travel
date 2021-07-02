@@ -1,4 +1,7 @@
-PopUpHide();
+$(document).ready(function () {
+  PopUpHide();
+});
+
 var viewportWidth = $(window).width();
 function PopUpShow() {
   $("#order-popup").show();
