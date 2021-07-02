@@ -1481,6 +1481,9 @@ template {
     gap: 3px;
     height: auto;
   }
+  .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
+    width: 280px;
+  }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 28px;
     line-height: 28px;
