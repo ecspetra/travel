@@ -95,6 +95,7 @@ body {
   box-sizing: border-box;
   color: #171c1d;
   font-family: "Raleway", sans-serif;
+  height: 100%;
 }
 body ::selection {
   color: white;
