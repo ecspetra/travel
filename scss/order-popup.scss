@@ -1,7 +1,7 @@
 .order-popup {
   width: 100%;
   min-height: 100%;
-  background-color: rgba($darken-color, 0.8);
+  background-color: rgba(white, 1);
   overflow: hidden;
   margin: auto;
   position: absolute;
@@ -10,33 +10,38 @@
   bottom: 0;
   right: 0;
   z-index: 2;
-
+  background-image: linear-gradient(
+      to bottom,
+      rgba($darken-color, 1) 20%,
+      rgba($darken-color, 0.5) 100%
+    ),
+    url("../img/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   .order-popup__content {
-    background-image: linear-gradient(
-        to bottom,
-        rgba($darken-color, 1) 0%,
-        rgba($darken-color, 0) 100%
-      ),
-      url("../img/popup-img.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: absolute;
     left: 50% !important;
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
-    width: 600px;
+    max-width: 600px;
     height: auto;
-    font-size: 30px;
-    color: #fff;
+    color: $darken-color;
     padding: 30px;
-    background-color: #c5c5c5;
-    -webkit-box-shadow: 0px 0px 50px 0px rgba($darken-color, 1);
-    -moz-box-shadow: 0px 0px 50px 0px rgba($darken-color, 1);
-    box-shadow: 0px 0px 50px 0px rgba($darken-color, 1);
+    background-color: rgba(white, 1);
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: overlay;
+    label {
+      opacity: 0.6;
+      font-size: 16px;
+    }
+
     .order-popup__content__form {
       display: flex;
       flex-direction: column;
@@ -44,10 +49,12 @@
       align-items: flex-start;
       .order-popup__content__form__headline {
         font-family: "Raleway", sans-serif;
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 700;
         margin: 0px 0px 30px 0px;
+        padding: 0px 40px 0px 0px;
         max-width: 540px;
+        box-sizing: border-box;
 
         span {
           color: $accent-color;
@@ -69,15 +76,16 @@
           box-sizing: border-box;
           outline: none;
           border: none;
-          background-color: rgba(white, 0.7);
+          background-color: white;
           -webkit-transition: all 0.3s ease-in-out;
           -moz-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           -ms-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
+          border: 1px solid rgba($darken-color, 0.3);
 
           &:focus {
-            background-color: rgba(white, 1);
+            border: 1px solid rgba($darken-color, 1);
           }
         }
         .client-name {
@@ -112,7 +120,61 @@
         height: auto;
       }
       &:hover svg * {
-        fill: $accent-color;
+        fill: rgba($accent-color, 1);
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .order-popup {
+    .order-popup__content {
+      padding: 20px;
+      font-size: 14px;
+      .order-popup__content__form {
+        .order-popup__content__form__headline {
+          margin: 0px 0px 0px 0px;
+          font-size: 18px;
+          span {
+          }
+        }
+        .form__item {
+          width: 100%;
+          margin: 20px 0px 0px 0px;
+
+          .form__item__field {
+            padding: 0px 12px;
+            height: 44px;
+            height: 36px;
+
+            &:focus {
+            }
+          }
+          .client-name {
+          }
+          .client-surname {
+          }
+          .client-phone {
+          }
+          .client-tour {
+          }
+        }
+
+        .submit-button {
+          margin: 20px 0px 0px 0px;
+        }
+      }
+      .close-button {
+        right: 20px;
+        top: 20px;
+        width: 16px;
+        height: auto;
+
+        svg {
+          width: 16px;
+          height: auto;
+        }
+        &:hover svg * {
+        }
       }
     }
   }
