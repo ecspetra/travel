@@ -694,11 +694,13 @@
         }
         .about-section__content__text-block__advantages {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: auto auto;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto auto;
           grid-template-areas:
-            "item-1 item-2"
-            "item-3 item-4";
+            "item-1"
+            "item-2"
+            "item-3"
+            "item-4";
           align-self: start;
           align-items: start;
           gap: 40px 20px;
