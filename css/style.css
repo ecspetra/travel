@@ -1340,6 +1340,9 @@ template {
   .gallery-section .gallery-section__content .gallery-section__content__photos {
     height: 90vh;
   }
+  .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
+    width: 400px;
+  }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 46px;
     line-height: 46px;
@@ -1360,6 +1363,9 @@ template {
   .gallery-section .gallery-section__content .gallery-section__content__photos {
     height: 90vh;
   }
+  .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
+    width: 360px;
+  }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 40px;
     line-height: 40px;
@@ -1371,6 +1377,9 @@ template {
   }
   .gallery-section .gallery-section__content .gallery-section__content__photos {
     height: 90vh;
+  }
+  .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
+    width: 320px;
   }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 36px;
@@ -1384,6 +1393,9 @@ template {
   .gallery-section .gallery-section__content .gallery-section__content__photos {
     height: 90vh;
   }
+  .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
+    width: 280px;
+  }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 32px;
     line-height: 32px;
@@ -1395,6 +1407,9 @@ template {
   }
   .gallery-section .gallery-section__content .gallery-section__content__photos {
     height: 90vh;
+  }
+  .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
+    width: 240px;
   }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 28px;
@@ -1446,6 +1461,9 @@ template {
     grid-template-areas: "small-photo-1 big-photo-2" "small-photo-3 big-photo-1" "small-photo-4 small-photo-2";
     gap: 3px;
     height: 560px;
+  }
+  .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
+    width: 300px;
   }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 22px;
