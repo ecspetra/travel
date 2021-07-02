@@ -1462,7 +1462,7 @@ template {
     gap: 0px 0px;
     grid-template-areas: "big-photo-2" "small-photo-2" "small-photo-3" "big-photo-1" "small-photo-1" "small-video";
     gap: 3px;
-    height: 560px;
+    height: auto;
   }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 28px;
@@ -2393,7 +2393,7 @@ template {
 }
 @media (max-width: 490px) {
   .contacts-section {
-    padding: 0px 20px 40px 20px;
+    padding: 10px 20px 40px 20px;
   }
   .contacts-section .contacts-section__content .contacts-section__content__right .contacts-section__content__right__text-block .contacts-section__content__right__text-block__headline {
     font-size: 40px;
