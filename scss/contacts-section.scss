@@ -796,6 +796,7 @@
       }
       .contacts-section__content__img__company-info {
         .contacts-section__content__img__company-info__content {
+          width: 100%;
           .contacts-section__content__img__company-info__content__copyright {
             span {
             }
@@ -816,6 +817,7 @@
 }
 @media (max-width: 490px) {
   .contacts-section {
+    padding: 0px 20px 40px 20px;
     .contacts-section__content {
       .contacts-section__content__right {
         .contacts-section__content__right__logo {

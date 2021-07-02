@@ -1055,6 +1055,7 @@ template {
   .hero-section .hero-section__content .hero-section__content__text-block .hero-section__content__text-block__headline span {
     font-size: 70px;
     -webkit-text-stroke: 2px white;
+    letter-spacing: 0;
     margin: 0px;
   }
   .hero-section .hero-section__content .hero-section__content__text-block .hero-section__content__text-block__paragraph {
@@ -2385,7 +2386,15 @@ template {
     display: none;
   }
 }
+@media (max-width: 860px) {
+  .contacts-section .contacts-section__content .contacts-section__content__img__company-info .contacts-section__content__img__company-info__content {
+    width: 100%;
+  }
+}
 @media (max-width: 490px) {
+  .contacts-section {
+    padding: 0px 20px 40px 20px;
+  }
   .contacts-section .contacts-section__content .contacts-section__content__right .contacts-section__content__right__text-block .contacts-section__content__right__text-block__headline {
     font-size: 40px;
     line-height: 40px;
