@@ -1256,11 +1256,11 @@ template {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
   grid-template-areas: "small-photo-1 big-photo-1 small-photo-2" "small-photo-3 big-photo-1 big-photo-2" "small-photo-4 big-photo-1 big-photo-2";
   gap: 3px;
   position: relative;
   height: 90vh;
+  width: 100%;
 }
 .gallery-section .gallery-section__content .gallery-section__content__photos .gallery-section__content__photos__item {
   background-position: center;
@@ -1450,14 +1450,13 @@ template {
 }
 @media (max-width: 860px) {
   .gallery-section .gallery-section__content {
-    max-width: 100%;
+    width: 100%;
     padding: 60px 20px 50px 20px;
   }
   .gallery-section .gallery-section__content .gallery-section__content__photos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
     grid-template-areas: "small-photo-1 big-photo-2" "small-photo-3 big-photo-1" "small-photo-4 small-photo-2";
     gap: 3px;
     height: 560px;
@@ -1474,15 +1473,15 @@ template {
 @media (max-width: 490px) {
   .gallery-section .gallery-section__content .gallery-section__content__photos {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 240px 240px 240px 240px 240px 240px;
-    gap: 0px 0px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: "big-photo-2" "small-photo-2" "small-photo-3" "big-photo-1" "small-photo-1" "small-photo-4";
     gap: 3px;
     height: auto;
   }
-  .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-1 {
+  .gallery-section .gallery-section__content .gallery-section__content__photos .gallery-section__content__photos__item {
     width: 280px;
+    height: 200px;
   }
   .gallery-section .gallery-section__content .gallery-section__content__photos .big-photo-2 .gallery-section__content__photos__item__headline {
     font-size: 28px;
