@@ -1,16 +1,21 @@
 {
   "name": "travel",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass scss/:css/ --watch"
   },
-  "author": "",
+  "author": "ecspetra",
   "license": "ISC",
   "dependencies": {
-    "fullpage.js": "^3.1.1",
-    "sass": "^1.34.1"
-  }
+    "sass": "^1.35.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecspetra/travel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ecspetra/travel/issues"
+  },
+  "homepage": "https://github.com/ecspetra/travel#readme"
 }
