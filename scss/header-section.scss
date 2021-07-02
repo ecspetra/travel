@@ -78,8 +78,7 @@
 }
 
 .mobile-header {
-  position: fixed;
-  transform: translate3d(0px, 0px, 0px);
+  position: fixed !important;
   left: 0;
   top: 0 !important;
   height: 60px;
