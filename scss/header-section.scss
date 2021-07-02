@@ -60,6 +60,9 @@
         color: white;
         z-index: 2;
         text-align: right;
+        &:hover {
+          color: $accent-color;
+        }
       }
       .phone {
         grid-area: phone;

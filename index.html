@@ -292,9 +292,31 @@
   <div class="order-popup" id="order-popup">
     <div class="order-popup__content">
       <form class="order-popup__content__form" action="" method="post">
-        <div class="order-popup__content__form__headline"><span>Fill out the form</span> and we will call you back to
-          agree on the
-          details of your trip</div>
+        <div class="form__headline">
+          <div class="form__headline__text"><span>Fill out the form</span> and we will call you back to
+            agree on the
+            details of your trip</div>
+          <button class="form__headline__close-button" onclick="PopUpHide()"><svg class="" width="512" height="512"
+              enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 341.75 341.75" xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg">
+              <g xmlns="http://www.w3.org/2000/svg">
+
+
+                <rect transform="matrix(.7072 -.707 .707 .7072 -70.787 170.83)" x="-49.415" y="149.54" width="440.53"
+                  height="42.667" fill="#b9babb" style="" data-original="#b9babb" />
+
+              </g>
+              <g xmlns="http://www.w3.org/2000/svg">
+
+
+                <rect transform="matrix(.707 -.7072 .7072 .707 -70.771 170.92)" x="149.57" y="-49.388" width="42.667"
+                  height="440.53" fill="#b9babb" style="" data-original="#b9babb" />
+              </g>
+            </svg>
+          </button>
+        </div>
+
+
         <div class="form__item"><label for="client-name">Name</label>
           <input class="form__item__field client-name" id="client-name" type="text" name="client-name" required>
         </div>
@@ -317,24 +339,8 @@
         </div>
         <input class="submit-button button" type="submit" value="Send">
       </form>
-      <button class="close-button" onclick="PopUpHide()"><svg class="" width="512" height="512"
-          enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 341.75 341.75" xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg">
-          <g xmlns="http://www.w3.org/2000/svg">
 
 
-            <rect transform="matrix(.7072 -.707 .707 .7072 -70.787 170.83)" x="-49.415" y="149.54" width="440.53"
-              height="42.667" fill="#b9babb" style="" data-original="#b9babb" />
-
-          </g>
-          <g xmlns="http://www.w3.org/2000/svg">
-
-
-            <rect transform="matrix(.707 -.7072 .7072 .707 -70.771 170.92)" x="149.57" y="-49.388" width="42.667"
-              height="440.53" fill="#b9babb" style="" data-original="#b9babb" />
-          </g>
-        </svg>
-      </button>
     </div>
   </div>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

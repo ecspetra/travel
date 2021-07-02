@@ -1,7 +1,5 @@
 .order-popup {
   width: 100%;
-  min-height: 100%;
-  background-color: rgba(white, 1);
   overflow: hidden;
   margin: auto;
   position: absolute;
@@ -19,46 +17,71 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: grid;
+  justify-content: center;
+  align-items: center;
   .order-popup__content {
-    position: absolute;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    max-width: 600px;
-    height: auto;
+    position: relative;
     color: $darken-color;
-    padding: 30px;
-    background-color: rgba(white, 1);
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 500;
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(white, 1);
+    display: grid;
     justify-content: center;
-    align-items: flex-start;
-    overflow: overlay;
-    label {
-      opacity: 0.6;
-      font-size: 16px;
-    }
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 540px;
+    height: 100%;
+    overflow: auto;
 
     .order-popup__content__form {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      .order-popup__content__form__headline {
+      padding: 30px;
+
+      .form__headline {
         font-family: "Raleway", sans-serif;
         font-size: 24px;
         font-weight: 700;
         margin: 0px 0px 30px 0px;
-        padding: 0px 40px 0px 0px;
-        max-width: 540px;
-        box-sizing: border-box;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
 
         span {
           color: $accent-color;
         }
+
+        .form__headline__text {
+          padding: 0px 20px 0px 0px;
+        }
+        .form__headline__close-button {
+          margin: 3px 0px 0px 0px;
+          padding: 0;
+          background: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          width: 22px;
+          height: auto;
+
+          svg {
+            width: 22px;
+            height: auto;
+          }
+          &:hover svg * {
+            fill: rgba($accent-color, 1);
+          }
+        }
+      }
+      label {
+        opacity: 0.6;
+        font-size: 16px;
       }
       .form__item {
         width: 100%;
@@ -103,48 +126,44 @@
         margin: 60px 0px 0px 0px;
       }
     }
-    .close-button {
-      position: absolute;
-      right: 30px;
-      top: 30px;
-      padding: 0;
-      background: none;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      width: 22px;
-      height: auto;
-
-      svg {
-        width: 22px;
-        height: auto;
-      }
-      &:hover svg * {
-        fill: rgba($accent-color, 1);
-      }
-    }
   }
 }
+
 @media (max-width: 1400px) {
   .order-popup {
     .order-popup__content {
-      padding: 20px;
-      font-size: 14px;
       .order-popup__content__form {
-        .order-popup__content__form__headline {
-          margin: 0px 0px 0px 0px;
-          font-size: 18px;
+        padding: 20px;
+
+        .form__headline {
+          margin: 0px 0px 10px 0px;
           span {
           }
+
+          .form__headline__text {
+            font-size: 18px;
+          }
+          .form__headline__close-button {
+            margin: -5px 0px 0px 0px;
+            width: 16px;
+            height: auto;
+
+            svg {
+              width: 16px;
+              height: auto;
+            }
+            &:hover svg * {
+            }
+          }
+        }
+        label {
+          font-size: 14px;
         }
         .form__item {
-          width: 100%;
-          margin: 20px 0px 0px 0px;
-
           .form__item__field {
             padding: 0px 12px;
-            height: 44px;
             height: 36px;
+            margin: 10px 0px 0px 0px;
 
             &:focus {
             }
@@ -160,20 +179,7 @@
         }
 
         .submit-button {
-          margin: 20px 0px 0px 0px;
-        }
-      }
-      .close-button {
-        right: 20px;
-        top: 20px;
-        width: 16px;
-        height: auto;
-
-        svg {
-          width: 16px;
-          height: auto;
-        }
-        &:hover svg * {
+          margin: 40px 0px 0px 0px;
         }
       }
     }

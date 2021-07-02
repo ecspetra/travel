@@ -307,19 +307,27 @@ template {
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border: 1px solid rgba(23, 28, 29, 0.3);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .select-styled:after {
   content: " ";
   background-image: url("../img/down-arrow.svg");
-  background-size: 100%;
+  background-size: 27%;
   background-repeat: no-repeat;
   background-position: center;
-  width: 12px;
-  height: 12px;
+  width: 40px;
+  height: 20px;
   position: absolute;
-  top: 14px;
-  right: 12px;
-  opacity: 0.7;
+  right: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .select-styled:hover {
   background-color: white;
@@ -432,6 +440,9 @@ template {
   color: white;
   z-index: 2;
   text-align: right;
+}
+.header-section .header-section__content .header-section__content__contacts .header-section__content__contacts__item:hover {
+  color: #16c7a9;
 }
 .header-section .header-section__content .header-section__content__contacts .phone {
   grid-area: phone;
@@ -2547,8 +2558,6 @@ template {
 }
 .order-popup {
   width: 100%;
-  min-height: 100%;
-  background-color: white;
   overflow: hidden;
   margin: auto;
   position: absolute;
@@ -2561,47 +2570,69 @@ template {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 .order-popup .order-popup__content {
-  position: absolute;
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  max-width: 600px;
-  height: auto;
+  position: relative;
   color: #171c1d;
-  padding: 30px;
-  background-color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 500;
-  display: flex;
-  flex-direction: column;
+  background-color: white;
+  display: grid;
   justify-content: center;
-  align-items: flex-start;
-  overflow: overlay;
-}
-.order-popup .order-popup__content label {
-  opacity: 0.6;
-  font-size: 16px;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 540px;
+  height: 100%;
+  overflow: auto;
 }
 .order-popup .order-popup__content .order-popup__content__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 30px;
 }
-.order-popup .order-popup__content .order-popup__content__form .order-popup__content__form__headline {
+.order-popup .order-popup__content .order-popup__content__form .form__headline {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
   font-weight: 700;
   margin: 0px 0px 30px 0px;
-  padding: 0px 40px 0px 0px;
-  max-width: 540px;
-  box-sizing: border-box;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.order-popup .order-popup__content .order-popup__content__form .order-popup__content__form__headline span {
+.order-popup .order-popup__content .order-popup__content__form .form__headline span {
   color: #16c7a9;
+}
+.order-popup .order-popup__content .order-popup__content__form .form__headline .form__headline__text {
+  padding: 0px 20px 0px 0px;
+}
+.order-popup .order-popup__content .order-popup__content__form .form__headline .form__headline__close-button {
+  margin: 3px 0px 0px 0px;
+  padding: 0;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 22px;
+  height: auto;
+}
+.order-popup .order-popup__content .order-popup__content__form .form__headline .form__headline__close-button svg {
+  width: 22px;
+  height: auto;
+}
+.order-popup .order-popup__content .order-popup__content__form .form__headline .form__headline__close-button:hover svg * {
+  fill: #16c7a9;
+}
+.order-popup .order-popup__content .order-popup__content__form label {
+  opacity: 0.6;
+  font-size: 16px;
 }
 .order-popup .order-popup__content .order-popup__content__form .form__item {
   width: 100%;
@@ -2634,56 +2665,36 @@ template {
   width: 100%;
   margin: 60px 0px 0px 0px;
 }
-.order-popup .order-popup__content .close-button {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  padding: 0;
-  background: none;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  width: 22px;
-  height: auto;
-}
-.order-popup .order-popup__content .close-button svg {
-  width: 22px;
-  height: auto;
-}
-.order-popup .order-popup__content .close-button:hover svg * {
-  fill: #16c7a9;
-}
 
 @media (max-width: 1400px) {
-  .order-popup .order-popup__content {
+  .order-popup .order-popup__content .order-popup__content__form {
     padding: 20px;
-    font-size: 14px;
   }
-  .order-popup .order-popup__content .order-popup__content__form .order-popup__content__form__headline {
-    margin: 0px 0px 0px 0px;
+  .order-popup .order-popup__content .order-popup__content__form .form__headline {
+    margin: 0px 0px 10px 0px;
+  }
+  .order-popup .order-popup__content .order-popup__content__form .form__headline .form__headline__text {
     font-size: 18px;
   }
-  .order-popup .order-popup__content .order-popup__content__form .form__item {
-    width: 100%;
-    margin: 20px 0px 0px 0px;
+  .order-popup .order-popup__content .order-popup__content__form .form__headline .form__headline__close-button {
+    margin: -5px 0px 0px 0px;
+    width: 16px;
+    height: auto;
+  }
+  .order-popup .order-popup__content .order-popup__content__form .form__headline .form__headline__close-button svg {
+    width: 16px;
+    height: auto;
+  }
+  .order-popup .order-popup__content .order-popup__content__form label {
+    font-size: 14px;
   }
   .order-popup .order-popup__content .order-popup__content__form .form__item .form__item__field {
     padding: 0px 12px;
-    height: 44px;
     height: 36px;
+    margin: 10px 0px 0px 0px;
   }
   .order-popup .order-popup__content .order-popup__content__form .submit-button {
-    margin: 20px 0px 0px 0px;
-  }
-  .order-popup .order-popup__content .close-button {
-    right: 20px;
-    top: 20px;
-    width: 16px;
-    height: auto;
-  }
-  .order-popup .order-popup__content .close-button svg {
-    width: 16px;
-    height: auto;
+    margin: 40px 0px 0px 0px;
   }
 }
 

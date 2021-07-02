@@ -1,9 +1,9 @@
 /* Error: Undefined variable.
  *    ,
- * 15 |       rgba($darken-color, 1) 20%,
+ * 13 |       rgba($darken-color, 1) 20%,
  *    |            ^^^^^^^^^^^^^
  *    '
- *   scss\order-popup.scss 15:12  root stylesheet */
+ *   scss\order-popup.scss 13:12  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 15 \2502        rgba($darken-color, 1) 20%,\d\a    \2502             ^^^^^^^^^^^^^\a    \2575 \a   scss\\order-popup.scss 15:12  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 13 \2502        rgba($darken-color, 1) 20%,\d\a    \2502             ^^^^^^^^^^^^^\a    \2575 \a   scss\\order-popup.scss 13:12  root stylesheet";
 }
