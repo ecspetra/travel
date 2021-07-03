@@ -1125,7 +1125,7 @@ svg * {
 @media (max-width: 490px) {
   .hero-section {
     height: auto;
-    padding: 115px 0px 60px 0px;
+    padding: 50px 0px 60px 0px;
   }
   .hero-section .hero-section__content {
     max-width: 490px;
